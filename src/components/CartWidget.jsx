@@ -1,7 +1,7 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
-const CartWidget = () => {   // ← Aquí W mayúscula
+const CartWidget = () => { 
   return (
     <div style={{ color: "white", fontSize: "1.5rem", cursor: "pointer" }}>
       <FaShoppingCart />
