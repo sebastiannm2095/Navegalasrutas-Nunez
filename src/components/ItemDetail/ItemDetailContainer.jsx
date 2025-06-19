@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProductById } from "../data/mockProducts";
+import { fetchProductById } from "../../firebase/products";
 import ItemDetail from "./ItemDetail";
-console.log("Tipo:", typeof ItemDetail);
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null);
   const { itemId } = useParams();
 
   useEffect(() => {
-    getProductById(itemId)
+    fetchProductById(itemId)
       .then((res) => setProduct(res))
       .catch((err) => console.error(err));
   }, [itemId]);
